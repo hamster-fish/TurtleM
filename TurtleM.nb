@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4500,        153]
-NotebookOptionsPosition[      3843,        126]
-NotebookOutlinePosition[      4199,        142]
-CellTagsIndexPosition[      4156,        139]
+NotebookDataLength[      4323,        149]
+NotebookOptionsPosition[      3629,        121]
+NotebookOutlinePosition[      3985,        137]
+CellTagsIndexPosition[      3942,        134]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -54,8 +54,7 @@ Cell[BoxData[
      RowBox[{"{", 
       RowBox[{"a", ",", "b"}], "}"}], "]"}], ";", "a"}], ")"}]}]], "Input",
  CellChangeTimes->{{3.6792698897470093`*^9, 3.679269923889666*^9}, {
-  3.6792699564038258`*^9, 3.679269956481866*^9}},
- CellLabel->"In[16]:="],
+  3.6792699564038258`*^9, 3.679269956481866*^9}}],
 
 Cell[CellGroupData[{
 
@@ -80,49 +79,45 @@ Cell[BoxData[
     "list"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.679269643242641*^9, 3.679269660884225*^9}, {
   3.6792698064787416`*^9, 3.679269894179426*^9}, {3.679269941878124*^9, 
-  3.679269942182501*^9}},
- CellLabel->"In[17]:="],
+  3.679269942182501*^9}}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"1", ",", "0"}], "}"}]], "Print",
- CellChangeTimes->{{3.679269926412129*^9, 3.679269958350479*^9}},
- CellLabel->"During evaluation of In[17]:="],
+ CellChangeTimes->{{3.679269926412129*^9, 3.679269958350479*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"2", ",", "1"}], "}"}]], "Print",
- CellChangeTimes->{{3.679269926412129*^9, 3.679269958356579*^9}},
- CellLabel->"During evaluation of In[17]:="],
+ CellChangeTimes->{{3.679269926412129*^9, 3.679269958356579*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"3", ",", "2"}], "}"}]], "Print",
- CellChangeTimes->{{3.679269926412129*^9, 3.679269958364102*^9}},
- CellLabel->"During evaluation of In[17]:="],
+ CellChangeTimes->{{3.679269926412129*^9, 3.679269958364102*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"4", ",", "3"}], "}"}]], "Print",
- CellChangeTimes->{{3.679269926412129*^9, 3.679269958366642*^9}},
- CellLabel->"During evaluation of In[17]:="],
+ CellChangeTimes->{{3.679269926412129*^9, 3.679269958366642*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"5", ",", "4"}], "}"}]], "Print",
- CellChangeTimes->{{3.679269926412129*^9, 3.679269958369132*^9}},
- CellLabel->"During evaluation of In[17]:="]
+ CellChangeTimes->{{3.679269926412129*^9, 3.679269958369132*^9}}]
 }, Open  ]],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"0", ",", "1", ",", "2", ",", "3", ",", "4", ",", "5"}], 
   "}"}]], "Output",
- CellChangeTimes->{{3.679269942500984*^9, 3.6792699583754797`*^9}},
- CellLabel->"Out[17]="]
-}, Open  ]]
+ CellChangeTimes->{{3.679269942500984*^9, 3.6792699583754797`*^9}}]
+}, Open  ]],
+
+Cell[BoxData["\:5154\:5154"], "Input",
+ CellChangeTimes->{3.679302135084807*^9}]
 },
 WindowSize->{808, 755},
 WindowMargins->{{314, Automatic}, {Automatic, 50}},
@@ -143,18 +138,19 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 417, 10, 43, "Input"],
 Cell[978, 32, 514, 11, 44, "Input"],
-Cell[1495, 45, 406, 12, 44, "Input"],
+Cell[1495, 45, 382, 11, 44, "Input"],
 Cell[CellGroupData[{
-Cell[1926, 61, 726, 22, 94, "Input"],
+Cell[1902, 60, 702, 21, 94, "Input"],
 Cell[CellGroupData[{
-Cell[2677, 87, 183, 4, 30, "Print"],
-Cell[2863, 93, 183, 4, 30, "Print"],
-Cell[3049, 99, 183, 4, 30, "Print"],
-Cell[3235, 105, 183, 4, 30, "Print"],
-Cell[3421, 111, 183, 4, 30, "Print"]
+Cell[2629, 85, 138, 3, 30, "Print"],
+Cell[2770, 90, 138, 3, 30, "Print"],
+Cell[2911, 95, 138, 3, 30, "Print"],
+Cell[3052, 100, 138, 3, 30, "Print"],
+Cell[3193, 105, 138, 3, 30, "Print"]
 }, Open  ]],
-Cell[3619, 118, 208, 5, 43, "Output"]
-}, Open  ]]
+Cell[3346, 111, 184, 4, 43, "Output"]
+}, Open  ]],
+Cell[3545, 118, 80, 1, 44, "Input"]
 }
 ]
 *)
