@@ -1,1 +1,161 @@
-Notebook[{}]
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4500,        153]
+NotebookOptionsPosition[      3843,        126]
+NotebookOutlinePosition[      4199,        142]
+CellTagsIndexPosition[      4156,        139]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$defaultTurtleState", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0"}], "}"}], ",", "0", ",", "True"}], "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6792702421352053`*^9, 3.679270249364279*^9}, {
+  3.679270287727044*^9, 3.679270302585194*^9}, {3.679270562435882*^9, 
+  3.6792705893500347`*^9}, {3.679301730475651*^9, 3.679301746387615*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"turtleProc", "[", 
+   RowBox[{"proc", ":", 
+    RowBox[{"{", "__", "}"}]}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{"{", 
+    RowBox[{"turtleStates", ","}], "}"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.679219388806863*^9, 3.679219400784099*^9}, {
+   3.679219430807289*^9, 3.679219430880254*^9}, {3.679219733398944*^9, 
+   3.679219733632616*^9}, {3.679219924632753*^9, 3.6792199341034*^9}, {
+   3.679270084358384*^9, 3.6792700913732443`*^9}, 3.6792702214981823`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"w", "[", 
+   RowBox[{"{", 
+    RowBox[{"a_", ",", "b_"}], "}"}], "]"}], ":=", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b"}], "}"}], "]"}], ";", "a"}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.6792698897470093`*^9, 3.679269923889666*^9}, {
+  3.6792699564038258`*^9, 3.679269956481866*^9}},
+ CellLabel->"In[16]:="],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Module", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"list", "=", 
+     RowBox[{"{", "0", "}"}]}], "}"}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"list", ",", 
+        RowBox[{"w", "[", 
+         RowBox[{"{", 
+          RowBox[{"#", ",", 
+           RowBox[{"Last", "[", "list", "]"}]}], "}"}], "]"}]}], "]"}], "&"}],
+      "/@", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "3", ",", "4", ",", "5"}], "}"}]}], ";", 
+    "list"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.679269643242641*^9, 3.679269660884225*^9}, {
+  3.6792698064787416`*^9, 3.679269894179426*^9}, {3.679269941878124*^9, 
+  3.679269942182501*^9}},
+ CellLabel->"In[17]:="],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "0"}], "}"}]], "Print",
+ CellChangeTimes->{{3.679269926412129*^9, 3.679269958350479*^9}},
+ CellLabel->"During evaluation of In[17]:="],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2", ",", "1"}], "}"}]], "Print",
+ CellChangeTimes->{{3.679269926412129*^9, 3.679269958356579*^9}},
+ CellLabel->"During evaluation of In[17]:="],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"3", ",", "2"}], "}"}]], "Print",
+ CellChangeTimes->{{3.679269926412129*^9, 3.679269958364102*^9}},
+ CellLabel->"During evaluation of In[17]:="],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"4", ",", "3"}], "}"}]], "Print",
+ CellChangeTimes->{{3.679269926412129*^9, 3.679269958366642*^9}},
+ CellLabel->"During evaluation of In[17]:="],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"5", ",", "4"}], "}"}]], "Print",
+ CellChangeTimes->{{3.679269926412129*^9, 3.679269958369132*^9}},
+ CellLabel->"During evaluation of In[17]:="]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "1", ",", "2", ",", "3", ",", "4", ",", "5"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.679269942500984*^9, 3.6792699583754797`*^9}},
+ CellLabel->"Out[17]="]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{314, Automatic}, {Automatic, 50}},
+FrontEndVersion->"10.4 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 11, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 417, 10, 43, "Input"],
+Cell[978, 32, 514, 11, 44, "Input"],
+Cell[1495, 45, 406, 12, 44, "Input"],
+Cell[CellGroupData[{
+Cell[1926, 61, 726, 22, 94, "Input"],
+Cell[CellGroupData[{
+Cell[2677, 87, 183, 4, 30, "Print"],
+Cell[2863, 93, 183, 4, 30, "Print"],
+Cell[3049, 99, 183, 4, 30, "Print"],
+Cell[3235, 105, 183, 4, 30, "Print"],
+Cell[3421, 111, 183, 4, 30, "Print"]
+}, Open  ]],
+Cell[3619, 118, 208, 5, 43, "Output"]
+}, Open  ]]
+}
+]
+*)
+
