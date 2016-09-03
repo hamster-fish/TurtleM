@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5285,        177]
-NotebookOptionsPosition[      4588,        149]
-NotebookOutlinePosition[      4943,        165]
-CellTagsIndexPosition[      4900,        162]
+NotebookDataLength[      7719,        255]
+NotebookOptionsPosition[      6687,        216]
+NotebookOutlinePosition[      7040,        232]
+CellTagsIndexPosition[      6997,        229]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -145,11 +145,78 @@ Cell[BoxData[
    "]"}]}]], "Input",
  CellChangeTimes->{{3.679302484911538*^9, 3.6793025383385143`*^9}, {
   3.679302583710685*^9, 3.679302660668715*^9}, {3.6793027316599293`*^9, 
-  3.679302808885009*^9}}]
+  3.679302808885009*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["2016/9/3", "Subsubsection",
+ CellChangeTimes->{{3.6818851683926992`*^9, 3.681885172403541*^9}}],
+
+Cell["\<\
+The most simple target is to generate the same figure as turtle, while no \
+animation is required. This can be done with the forward function hjiaa \
+wrote, after converting the python code to a custom Mathematica style \
+instructions; or with the function AnglePath.\
+\>", "Text",
+ CellChangeTimes->{{3.681885176246531*^9, 3.681885281474613*^9}, {
+  3.6818853452471848`*^9, 3.6818853611866913`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AnglePath", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1.2", ",", 
+      RowBox[{"90.", "\[Degree]"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"2.1", ",", 
+      RowBox[{"130.", "\[Degree]"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.7", ",", 
+      RowBox[{
+       RowBox[{"-", "85."}], "\[Degree]"}]}], "}"}]}], "}"}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.68188536477115*^9, 3.681885382011495*^9}},
+ CellLabel->"In[79]:="],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7.347880794884119`*^-17", ",", "1.2`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "1.6086933305498539`"}], ",", 
+     RowBox[{"-", "0.14985398034173247`"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "2.103668077380437`"}], ",", "0.3451207664888508`"}], 
+    "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.681885382414317*^9},
+ CellLabel->"Out[79]="]
+}, Open  ]],
+
+Cell["This function basically converts length-angle to point data.", "Text",
+ CellChangeTimes->{{3.681885394696917*^9, 3.6818854185669394`*^9}, 
+   3.681885489959659*^9, {3.681885577199958*^9, 3.681885709310957*^9}}],
+
+Cell["\<\
+With animation, the job can be done with Animate or Dynamic. Animate function \
+has poor interactive ability, hence Dynamic is selected, for later extensions \
+with mouse clicks/positions.\
+\>", "Text",
+ CellChangeTimes->{3.681885722141553*^9}],
+
+Cell["", "Text"]
+}, Open  ]]
 },
-WindowSize->{808, 755},
-WindowMargins->{{277, Automatic}, {Automatic, 0}},
-FrontEndVersion->"10.4 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 11, \
+WindowSize->{1436, 855},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -164,21 +231,32 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 417, 10, 43, "Input"],
-Cell[978, 32, 514, 11, 44, "Input"],
-Cell[1495, 45, 382, 11, 44, "Input"],
+Cell[558, 20, 417, 10, 48, "Input"],
+Cell[978, 32, 514, 11, 48, "Input"],
+Cell[1495, 45, 382, 11, 48, "Input"],
 Cell[CellGroupData[{
-Cell[1902, 60, 702, 21, 94, "Input"],
+Cell[1902, 60, 702, 21, 48, "Input"],
 Cell[CellGroupData[{
-Cell[2629, 85, 138, 3, 30, "Print"],
-Cell[2770, 90, 138, 3, 30, "Print"],
-Cell[2911, 95, 138, 3, 30, "Print"],
-Cell[3052, 100, 138, 3, 30, "Print"],
-Cell[3193, 105, 138, 3, 30, "Print"]
+Cell[2629, 85, 138, 3, 36, "Print"],
+Cell[2770, 90, 138, 3, 36, "Print"],
+Cell[2911, 95, 138, 3, 36, "Print"],
+Cell[3052, 100, 138, 3, 36, "Print"],
+Cell[3193, 105, 138, 3, 36, "Print"]
 }, Open  ]],
-Cell[3346, 111, 184, 4, 43, "Output"]
+Cell[3346, 111, 184, 4, 48, "Output"]
 }, Open  ]],
-Cell[3545, 118, 1039, 29, 144, "Input"]
+Cell[3545, 118, 1039, 29, 80, "Input"],
+Cell[CellGroupData[{
+Cell[4609, 151, 101, 1, 52, "Subsubsection"],
+Cell[4713, 154, 410, 7, 76, "Text"],
+Cell[CellGroupData[{
+Cell[5148, 165, 489, 16, 48, "Input"],
+Cell[5640, 183, 524, 16, 51, "Output"]
+}, Open  ]],
+Cell[6179, 202, 216, 2, 46, "Text"],
+Cell[6398, 206, 254, 5, 76, "Text"],
+Cell[6655, 213, 16, 0, 46, "Text"]
+}, Open  ]]
 }
 ]
 *)
