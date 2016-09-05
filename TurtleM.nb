@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     23507,        668]
-NotebookOptionsPosition[     21741,        605]
-NotebookOutlinePosition[     22094,        621]
-CellTagsIndexPosition[     22051,        618]
+NotebookDataLength[     23603,        670]
+NotebookOptionsPosition[     21836,        607]
+NotebookOutlinePosition[     22189,        623]
+CellTagsIndexPosition[     22146,        620]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -598,9 +598,11 @@ Cell["\<\
 After obtaining the Mathematica style instructions, then a function that \
 converts these info to animation sequence is needed. 
 First the job is to convert the instructions into Mathematica objects. This \
-job can be done with Fold and sequentially changing turtle states.\
+job can be done with Fold and sequentially changing turtle states, and Reap \
+the calculated graphics objects.\
 \>", "Text",
- CellChangeTimes->{{3.68203966748066*^9, 3.682039805787939*^9}}]
+ CellChangeTimes->{{3.68203966748066*^9, 3.682039805787939*^9}, {
+  3.682040987906311*^9, 3.6820410252791224`*^9}}]
 }, Open  ]]
 },
 WindowSize->{1436, 855},
@@ -668,7 +670,7 @@ Cell[CellGroupData[{
 Cell[15168, 411, 2065, 46, 204, "Input"],
 Cell[17236, 459, 4112, 134, 173, "Output"]
 }, Open  ]],
-Cell[21363, 596, 362, 6, 76, "Text"]
+Cell[21363, 596, 457, 8, 105, "Text"]
 }, Open  ]]
 }
 ]
