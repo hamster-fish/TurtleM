@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13983,        407]
-NotebookOptionsPosition[     12492,        353]
-NotebookOutlinePosition[     12845,        369]
-CellTagsIndexPosition[     12802,        366]
+NotebookDataLength[     16640,        466]
+NotebookOptionsPosition[     15032,        408]
+NotebookOutlinePosition[     15385,        424]
+CellTagsIndexPosition[     15342,        421]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -321,33 +321,88 @@ Cell[BoxData[
      RowBox[{"(", 
       RowBox[{"includes", " ", "period"}], ")"}]}]}], "*)"}], 
   "\[IndentingNewLine]", 
-  RowBox[{"Which", "[", 
-   RowBox[{
-    RowBox[{"MemberQ", "[", 
-     RowBox[{"pyins", ",", "\"\<from turtle import *\>\""}], "]"}], ",", 
-    "\"\<\>\"", ",", 
-    RowBox[{"MemberQ", "[", 
-     RowBox[{"pyins", ",", "\"\<import turtle\>\""}], "]"}], ",", 
-    "\"\<turtle.\>\"", ",", 
-    RowBox[{"MemberQ", "[", 
-     RowBox[{"pyins", ",", 
-      RowBox[{"\"\<import turtle as \>\"", "~~", "_"}]}], "]"}], ",", 
+  RowBox[{"modulename", "=", 
+   RowBox[{"Which", "[", 
     RowBox[{
-     RowBox[{"Cases", "[", 
+     RowBox[{"MemberQ", "[", 
+      RowBox[{"pyins", ",", "\"\<from turtle import *\>\""}], "]"}], ",", 
+     "\"\<\>\"", ",", 
+     RowBox[{"MemberQ", "[", 
+      RowBox[{"pyins", ",", "\"\<import turtle\>\""}], "]"}], ",", 
+     "\"\<turtle.\>\"", ",", 
+     RowBox[{"MemberQ", "[", 
       RowBox[{"pyins", ",", 
-       RowBox[{
-        RowBox[{"\"\<import turtle as \>\"", "~~", "a_"}], "\[RuleDelayed]", 
-        RowBox[{"a", "<>", "\"\<.\>\""}]}]}], "]"}], "//", "First"}], ",", 
-    "True", ",", 
-    RowBox[{"Abort", "[", "]"}]}], "]"}]}]], "Input",
+       RowBox[{"\"\<import turtle as \>\"", "~~", "_"}]}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Cases", "[", 
+       RowBox[{"pyins", ",", 
+        RowBox[{
+         RowBox[{"\"\<import turtle as \>\"", "~~", "a_"}], "\[RuleDelayed]", 
+         
+         RowBox[{"a", "<>", "\"\<.\>\""}]}]}], "]"}], "//", "First"}], ",", 
+     "True", ",", 
+     RowBox[{"Abort", "[", "]"}]}], "]"}]}]}]], "Input",
  CellChangeTimes->{{3.6819952191567583`*^9, 3.681995226709634*^9}, {
   3.6819952625145493`*^9, 3.681995387360591*^9}, {3.681995636667222*^9, 
-  3.6819956858004417`*^9}, {3.6819957336101437`*^9, 3.681995754437777*^9}},
- CellLabel->"In[49]:="],
+  3.6819956858004417`*^9}, {3.6819957336101437`*^9, 3.681995754437777*^9}, {
+  3.682032667516136*^9, 3.682032669658506*^9}},
+ CellLabel->"In[50]:="],
 
 Cell[BoxData["\<\"turtle.\"\>"], "Output",
- CellChangeTimes->{{3.6819957269735117`*^9, 3.681995758901298*^9}},
- CellLabel->"Out[49]="]
+ CellChangeTimes->{{3.6819957269735117`*^9, 3.681995758901298*^9}, 
+   3.682032670235385*^9},
+ CellLabel->"Out[50]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{"pyins", ",", 
+   RowBox[{"StringMatchQ", "[", 
+    RowBox[{"Alternatives", "@@", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"modulename", "<>", "#", "<>", "\"\<(\>\""}], "~~", "___", 
+         "~~", "\"\<)\>\""}], "&"}], "/@", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<down\>\"", ",", "\"\<up\>\"", ",", "\"\<circle\>\"", ",", 
+         "\"\<goto\>\"", ",", "\"\<left\>\"", ",", "\"\<right\>\""}], "}"}]}],
+       ")"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.682032715275259*^9, 3.6820327288362913`*^9}, {
+  3.682032938274925*^9, 3.68203298905445*^9}, {3.682033068286483*^9, 
+  3.682033081486331*^9}, {3.682033127777622*^9, 3.682033145760276*^9}, {
+  3.6820332105812902`*^9, 3.682033257256466*^9}, {3.6820333225157537`*^9, 
+  3.682033364297352*^9}, {3.682033415586425*^9, 3.682033427223784*^9}},
+ CellLabel->"In[60]:="],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"turtle.up()\"\>", ",", "\<\"turtle.goto(0,-15)\"\>", 
+   ",", "\<\"turtle.down()\"\>", ",", "\<\"turtle.circle(5)\"\>", 
+   ",", "\<\"turtle.up()\"\>", ",", "\<\"turtle.goto(0,-100)\"\>", 
+   ",", "\<\"turtle.down()\"\>", ",", "\<\"turtle.circle(100)\"\>", 
+   ",", "\<\"turtle.up()\"\>", ",", "\<\"turtle.goto(-60,-2)\"\>", 
+   ",", "\<\"turtle.down()\"\>", ",", "\<\"turtle.circle(2)\"\>", 
+   ",", "\<\"turtle.up()\"\>", ",", "\<\"turtle.goto(60,-2)\"\>", 
+   ",", "\<\"turtle.down()\"\>", ",", "\<\"turtle.circle(2)\"\>", 
+   ",", "\<\"turtle.up()\"\>", ",", "\<\"turtle.goto(0,-15)\"\>", 
+   ",", "\<\"turtle.right(90)\"\>", ",", "\<\"turtle.down()\"\>", 
+   ",", "\<\"turtle.circle(7,120)\"\>", ",", "\<\"turtle.up()\"\>", 
+   ",", "\<\"turtle.goto(0,-15)\"\>", ",", "\<\"turtle.right(120)\"\>", 
+   ",", "\<\"turtle.down()\"\>", ",", "\<\"turtle.circle(-7,120)\"\>", 
+   ",", "\<\"turtle.up()\"\>", ",", "\<\"turtle.goto(-60,80)\"\>", 
+   ",", "\<\"turtle.down()\"\>", ",", "\<\"turtle.right(27.3)\"\>", 
+   ",", "\<\"turtle.circle(20,209)\"\>", ",", "\<\"turtle.up()\"\>", 
+   ",", "\<\"turtle.goto(60,80)\"\>", ",", "\<\"turtle.down()\"\>", 
+   ",", "\<\"turtle.left(85.6)\"\>", ",", "\<\"turtle.circle(-20,209)\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.682033230200321*^9, 3.682033257630217*^9}, 
+   3.682033325774542*^9, 3.682033428656987*^9},
+ CellLabel->"Out[60]="]
 }, Open  ]]
 }, Open  ]]
 },
@@ -405,8 +460,12 @@ Cell[8617, 262, 819, 20, 111, "Input"],
 Cell[9439, 284, 1620, 25, 266, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11096, 314, 1231, 31, 142, "Input"],
-Cell[12330, 347, 134, 2, 48, "Output"]
+Cell[11096, 314, 1341, 34, 142, "Input"],
+Cell[12440, 350, 160, 3, 48, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12637, 358, 933, 21, 111, "Input"],
+Cell[13573, 381, 1431, 23, 235, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
