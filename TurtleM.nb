@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     16640,        466]
-NotebookOptionsPosition[     15032,        408]
-NotebookOutlinePosition[     15385,        424]
-CellTagsIndexPosition[     15342,        421]
+NotebookDataLength[     23507,        668]
+NotebookOptionsPosition[     21741,        605]
+NotebookOutlinePosition[     22094,        621]
+CellTagsIndexPosition[     22051,        618]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -357,27 +357,29 @@ Cell[BoxData["\<\"turtle.\"\>"], "Output",
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"Select", "[", 
-  RowBox[{"pyins", ",", 
-   RowBox[{"StringMatchQ", "[", 
-    RowBox[{"Alternatives", "@@", 
-     RowBox[{"(", 
-      RowBox[{
+ RowBox[{"supportedPyins", "=", 
+  RowBox[{"Select", "[", 
+   RowBox[{"pyins", ",", 
+    RowBox[{"StringMatchQ", "[", 
+     RowBox[{"Alternatives", "@@", 
+      RowBox[{"(", 
        RowBox[{
         RowBox[{
-         RowBox[{"modulename", "<>", "#", "<>", "\"\<(\>\""}], "~~", "___", 
-         "~~", "\"\<)\>\""}], "&"}], "/@", 
-       RowBox[{"{", 
-        RowBox[{
-        "\"\<down\>\"", ",", "\"\<up\>\"", ",", "\"\<circle\>\"", ",", 
-         "\"\<goto\>\"", ",", "\"\<left\>\"", ",", "\"\<right\>\""}], "}"}]}],
-       ")"}]}], "]"}]}], "]"}]], "Input",
+         RowBox[{
+          RowBox[{"modulename", "<>", "#", "<>", "\"\<(\>\""}], "~~", "___", 
+          "~~", "\"\<)\>\""}], "&"}], "/@", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<down\>\"", ",", "\"\<up\>\"", ",", "\"\<circle\>\"", ",", 
+          "\"\<goto\>\"", ",", "\"\<left\>\"", ",", "\"\<right\>\""}], 
+         "}"}]}], ")"}]}], "]"}]}], "]"}]}]], "Input",
  CellChangeTimes->{{3.682032715275259*^9, 3.6820327288362913`*^9}, {
   3.682032938274925*^9, 3.68203298905445*^9}, {3.682033068286483*^9, 
   3.682033081486331*^9}, {3.682033127777622*^9, 3.682033145760276*^9}, {
   3.6820332105812902`*^9, 3.682033257256466*^9}, {3.6820333225157537`*^9, 
-  3.682033364297352*^9}, {3.682033415586425*^9, 3.682033427223784*^9}},
- CellLabel->"In[60]:="],
+  3.682033364297352*^9}, {3.682033415586425*^9, 3.682033427223784*^9}, {
+  3.682038019602934*^9, 3.6820380227059298`*^9}},
+ CellLabel->"In[61]:="],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -401,9 +403,204 @@ Cell[BoxData[
    ",", "\<\"turtle.left(85.6)\"\>", ",", "\<\"turtle.circle(-20,209)\"\>"}], 
   "}"}]], "Output",
  CellChangeTimes->{{3.682033230200321*^9, 3.682033257630217*^9}, 
-   3.682033325774542*^9, 3.682033428656987*^9},
- CellLabel->"Out[60]="]
-}, Open  ]]
+   3.682033325774542*^9, 3.682033428656987*^9, 3.6820380233908243`*^9},
+ CellLabel->"Out[61]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "convert", " ", "supported", " ", "turtle", " ", "instructions", " ", "to",
+     " ", "mathematica", " ", "expressions"}], "*)"}], "\[IndentingNewLine]", 
+  
+  RowBox[{"(*", 
+   RowBox[{"numerical", " ", "conversation", " ", "is", " ", "not", " ", 
+    RowBox[{"safe", ".", " ", "there"}], " ", "is", " ", "coflict", " ", 
+    "between", " ", "simple", " ", "safe", " ", "numerical", " ", 
+    "conversation", " ", "and", " ", "support", " ", "for", " ", "basic", " ",
+     "numerical", " ", "calculations", " ", "inside", " ", "function", " ", 
+    "arguments"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"turtleIns", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"StringCases", "[", 
+      RowBox[{
+       RowBox[{
+       "modulename", "~~", "func__", "~~", "\"\<(\>\"", "~~", "args___", 
+        "~~", "\"\<)\>\""}], "\[RuleDelayed]", 
+       RowBox[{"Sequence", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"StringSplit", "[", 
+          RowBox[{"args", ",", "\"\<,\>\""}], "]"}]}], "]"}]}], "]"}], "/@", 
+     "supportedPyins"}], "/.", 
+    RowBox[{
+     RowBox[{"{", "args__String", "}"}], "\[RuleDelayed]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"SyntaxQ", "[", "#", "]"}], ",", 
+          RowBox[{"ToExpression", "[", "#", "]"}], ",", "Nothing"}], "]"}], 
+        "&"}], "/@", 
+       RowBox[{"{", "args", "}"}]}], ")"}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.682037989513412*^9, 3.682038025641412*^9}, {
+  3.682038146387322*^9, 3.682038147946389*^9}, {3.682038296682047*^9, 
+  3.682038346302528*^9}, {3.682038442490353*^9, 3.6820385274428453`*^9}, {
+  3.682038564850018*^9, 3.682038583097539*^9}, {3.682038737844447*^9, 
+  3.6820387679322863`*^9}, {3.682038850123129*^9, 3.682038891998197*^9}, {
+  3.682038926714299*^9, 3.682038965363097*^9}, {3.682038999704892*^9, 
+  3.6820391048343782`*^9}, {3.6820391432624693`*^9, 3.682039183085979*^9}, {
+  3.682039313796625*^9, 3.682039440900028*^9}},
+ CellLabel->"In[88]:="],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"up\"\>", ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"goto\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "15"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"down\"\>", ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"circle\"\>", ",", 
+     RowBox[{"{", "5", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"up\"\>", ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"goto\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "100"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"down\"\>", ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"circle\"\>", ",", 
+     RowBox[{"{", "100", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"up\"\>", ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"goto\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "60"}], ",", 
+       RowBox[{"-", "2"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"down\"\>", ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"circle\"\>", ",", 
+     RowBox[{"{", "2", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"up\"\>", ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"goto\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{"60", ",", 
+       RowBox[{"-", "2"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"down\"\>", ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"circle\"\>", ",", 
+     RowBox[{"{", "2", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"up\"\>", ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"goto\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "15"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"right\"\>", ",", 
+     RowBox[{"{", "90", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"down\"\>", ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"circle\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "120"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"up\"\>", ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"goto\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "15"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"right\"\>", ",", 
+     RowBox[{"{", "120", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"down\"\>", ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"circle\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "7"}], ",", "120"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"up\"\>", ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"goto\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "60"}], ",", "80"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"down\"\>", ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"right\"\>", ",", 
+     RowBox[{"{", "27.3`", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"circle\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{"20", ",", "209"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"up\"\>", ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"goto\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{"60", ",", "80"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"down\"\>", ",", 
+     RowBox[{"{", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"left\"\>", ",", 
+     RowBox[{"{", "85.6`", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"circle\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "20"}], ",", "209"}], "}"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6820394178489428`*^9, 3.682039441902717*^9}},
+ CellLabel->"Out[88]="]
+}, Open  ]],
+
+Cell["\<\
+After obtaining the Mathematica style instructions, then a function that \
+converts these info to animation sequence is needed. 
+First the job is to convert the instructions into Mathematica objects. This \
+job can be done with Fold and sequentially changing turtle states.\
+\>", "Text",
+ CellChangeTimes->{{3.68203966748066*^9, 3.682039805787939*^9}}]
 }, Open  ]]
 },
 WindowSize->{1436, 855},
@@ -464,9 +661,14 @@ Cell[11096, 314, 1341, 34, 142, "Input"],
 Cell[12440, 350, 160, 3, 48, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12637, 358, 933, 21, 111, "Input"],
-Cell[13573, 381, 1431, 23, 235, "Output"]
-}, Open  ]]
+Cell[12637, 358, 1036, 23, 142, "Input"],
+Cell[13676, 383, 1455, 23, 235, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15168, 411, 2065, 46, 204, "Input"],
+Cell[17236, 459, 4112, 134, 173, "Output"]
+}, Open  ]],
+Cell[21363, 596, 362, 6, 76, "Text"]
 }, Open  ]]
 }
 ]
